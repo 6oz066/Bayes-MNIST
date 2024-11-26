@@ -245,7 +245,11 @@ if __name__ == '__main__':
 
 
     model = NeuralNetwork(0.01,3,6,x_train_flat,y_train/10,x_test_flat,y_test/10)
+    st=time.time()
     model.train()
+    ed = time.time()
+    extime = ed - st
+    print(extime)
     model.predict()
 
     # For test usage
